@@ -25,7 +25,8 @@ Enjoy!
 ```git clone https://github.com/rub3rth/lineplease ```<br>
 <br>
 clipboard function requires xsel package<br>
-```sudo apt-get install xsel``` 
+```sudo apt-get install xsel```
+# example usage
 ## for reverse shell line<br>
 ```./lineplease.sh [options] [interface] [port] ```<br><br>
 example:<br>
