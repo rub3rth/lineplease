@@ -9,7 +9,7 @@
 
 "You thought your secrets were safe...you..ehmm...line please!!"
 
-# Lineplease
+# lineplease
 
 Lineplease is a helper script (bash) designed to simplify the process of grabbing reverse shell oneliners from the web<br>
 and changing them to fit whatever need.
