@@ -129,3 +129,5 @@ LAZY OPTIONS
 		when prompted:	y to copy to clipboard (requires xsel)/any other key to continue
 		when prompted:	y to start web server in current directory/any other key to exit 
 ```
+# demo
+[![asciicast](https://asciinema.org/a/wLvMj4TdDoyWSY9I3pykriZkW.svg)](https://asciinema.org/a/wLvMj4TdDoyWSY9I3pykriZkW)
