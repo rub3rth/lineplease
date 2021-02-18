@@ -32,7 +32,7 @@ example:<br>
 ```./lineplease.sh -b eth0 1337```<br>
 <br>
 ipv4-address on desired interface is inserted into line<br> 
-for public ip specify interface as 'pub'<br><br>
+for public ip specify interface as ```pub```<br><br>
 when prompted:<br>
 y to copy line to clipboard (requires xsel) or any other key to continue <br>
 y to start netcat listener or any other key to exit<br>
