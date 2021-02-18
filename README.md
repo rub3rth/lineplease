@@ -5,7 +5,7 @@ and changing them to fit whatever need.
 <br>
 Started out as a simple personal tool to help my own lazy self but grew into a somewhat comprehensive list of lines<br>
 easily served up on the command line.<br>
-Check README.txt for the different options and how to use them.<br>
+Check OPTIONS.txt for the different options and how to use them.<br>
 <br>
 Most if not all creds goes to [PayloadAlltheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md) for the actual lines.<br>
 <br>
