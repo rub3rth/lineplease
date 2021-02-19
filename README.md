@@ -44,7 +44,7 @@ example:<br>
 when prompted:<br> 	
 ```y``` to create file or any other key to exit<br>
 ## demo
-![Demo](https://i.imgur.com/BO2Pc2m.gif)
+![Demo](https://i.imgur.com/FNTWSY6.gif)
 ## options
 ``` 
 -h 		display this page
