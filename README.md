@@ -34,15 +34,15 @@ example:<br>
 ipv4-address on desired interface is inserted into line<br> 
 for public ip specify interface as ```pub```<br><br>
 when prompted:<br>
-y to copy line to clipboard (requires xsel) or any other key to continue <br>
-y to start netcat listener or any other key to exit<br>
+```y``` to copy line to clipboard (requires xsel) or any other key to continue <br>
+```y``` to start netcat listener or any other key to exit<br>
 ## for msfvenom (requires msfvenom)<br>
 ```./lineplease.sh [options] [interface] [port] [name] ```<br><br>
 example:<br>
 ```./lineplease.sh -m2 tun0 1337 rev```<br>
 <br>
 when prompted:<br> 	
-y to create file or any other key to exit<br>
+```y``` to create file or any other key to exit<br>
 # demo
 ## options
 ``` 
