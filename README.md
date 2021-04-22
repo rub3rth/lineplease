@@ -112,8 +112,8 @@ MSFVENOM STAGED
                 (requires xsel)
 
 LAZY OPTIONS
--pu2		python -c 'import pty; pty.spawn("/bin/bash")'
--pu3 		python3 -c 'import pty; pty.spawn("/bin/bash")'
+-pl2		python -c 'import pty; pty.spawn("/bin/bash")'
+-pl3 		python3 -c 'import pty; pty.spawn("/bin/bash")'
 
 		loads up line for python shell upgrade
 
